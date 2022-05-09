@@ -1,3 +1,5 @@
-const Sample = require('./Sample');
+const User = require("./User");
+const Game = require("./Game")
+const Game_Stats = require("./Game-Stats")
 
-module.exports = { Sample };
+module.exports = { User, Game, Game_Stats };
