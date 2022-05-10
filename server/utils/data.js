@@ -7,7 +7,8 @@ const users = [
 
 const games = [
     { game_title: 'chess', game_url: 'https://buddyboardgames.com/chess', game_stats: [{games_played: 5, games_won: 3, games_lost: 2}]},
-    { game_title: 'checkers', game_url: 'https://buddyboardgames.com/checkers', game_stats: [gameStatsSchema]}
+    { game_title: 'checkers', game_url: 'https://buddyboardgames.com/checkers', game_stats: [gameStatsSchema]},
+    { game_title: 'uno', game_url: 'https://buddyboardgames.com/uno'}
 ]
 
 module.exports = {
