@@ -1,5 +1,5 @@
 const { User, Game } = require('../models');
-const { games } = require('../utils/data');
+//const { games } = require('../utils/data');
 
 // This is for signing up
 const createUser = async (req, res) => {
@@ -14,7 +14,7 @@ const createUser = async (req, res) => {
 
 // This if for the homepage
 const getAllUsers = async (req, res) => {
-  const allUsers = await User.find({});
+  const allUsers = await User.find({}).populate('games');
 
   if (!allUsers) {
     return res.status(400).json({ message: 'No users found' });
@@ -25,7 +25,7 @@ const getAllUsers = async (req, res) => {
 
 // This is for logging in and the dashboard
 const getUserById = async (req, res) => {
-  const user = await User.findById(req.params.userId);
+  const user = await User.findById(req.params.userId).populate('games');
 
   if (!user) {
     return res.status(400).json({ message: 'No user found by that id' });
@@ -35,6 +35,7 @@ const getUserById = async (req, res) => {
 }
 
 const addGame = async (req,res) => {
+  console.log(req.params.gameId);
   try{
     const addedGame = await User.findOneAndUpdate(
       { _id: req.params.userId },
