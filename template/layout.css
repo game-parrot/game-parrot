@@ -14,3 +14,35 @@
 .navbar-Nav{
     text-align: right;
 }
+
+.container.signup{
+    margin-top: 20%;
+}
+
+.card-text{
+    text-align: center;
+    display:block;
+    align-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 30rem;
+    text-align: center;
+}
+
+.con-card{
+
+}
+
+.test{
+    border: 2px solid;
+    border-color: red;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+
+}
+
