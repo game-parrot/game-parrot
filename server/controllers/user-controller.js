@@ -1,4 +1,5 @@
-const { User } = require('../models');
+const { User, Game } = require('../models');
+const { games } = require('../utils/data');
 
 // This is for signing up
 const createUser = async (req, res) => {
@@ -30,11 +31,26 @@ const getUserById = async (req, res) => {
     return res.status(400).json({ message: 'No user found by that id' });
   }
 
-  res.status(200).json(sample);
+  res.status(200).json(user);
+}
+
+const addGame = async (req,res) => {
+  try{
+    const addedGame = await User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $addToSet: { games: req.params.gameId}},
+      { new: true, runValidators: true},
+      );
+    res.status(200).json(addedGame);
+  }catch (err){
+    console.error(err);
+    res.status(500).json(err);
+  }
 }
 
 module.exports = {
   createUser,
   getAllUsers,
-  getUserById
+  getUserById,
+  addGame
 };
