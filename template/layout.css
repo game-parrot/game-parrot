@@ -1,0 +1,16 @@
+.jumbo{
+    text-align: center;
+}
+
+.container.first{
+    text-align: left;
+    margin-left: 5%;
+}
+
+.container.second{
+    text-align: right;
+}
+
+.navbar-Nav{
+    text-align: right;
+}
