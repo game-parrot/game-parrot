@@ -22,5 +22,5 @@ const gameStatsSchema = new Schema(
     }
 );
 
-const GameStats = model("GameStats", gameStatsSchema);
-module.exports = GameStats;
+const GameStats = model("gamestats", gameStatsSchema);
+module.exports = {GameStats, gameStatsSchema};

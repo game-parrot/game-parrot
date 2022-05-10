@@ -16,13 +16,13 @@ const gameSchema = new Schema(
     {
         toJSON: {
             getters: true,
-            virtuals: true
         }
     }
 );
 
-const Game = model("Game", gameSchema);
-module.exports = Game;
+const Game = model("game", gameSchema);
+
+module.exports = {Game, gameSchema};
 
 // get game 
 // exclude game_url
