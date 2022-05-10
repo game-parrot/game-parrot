@@ -24,7 +24,7 @@ const getAllUsers = async (req, res) => {
 
 // This is for logging in and the dashboard
 const getUserById = async (req, res) => {
-  const user = await User.findById(req.params.id);
+  const user = await User.findById(req.params.userId);
 
   if (!user) {
     return res.status(400).json({ message: 'No user found by that id' });
