@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose");
-const { gameSchema } = require("./Game")
+//const { gameSchema } = require("./Game")
 
 const userSchema = new Schema(
   {
@@ -11,7 +11,16 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    games: [gameSchema],
+    games: [{
+      type: Schema.Types.ObjectID,
+      ref: "Game",
+      game_stats: [
+        {
+          type: Schema.Types.ObjectID,
+          ref: 'GameStats'
+        }
+      ]
+    }],
     friends: [this]
   },
   {
@@ -24,6 +33,6 @@ const userSchema = new Schema(
 
 userSchema.virtual("friendCount").get(function () { return this.friends.length })
 
-const User = model("user", userSchema);
+const User = model("User", userSchema);
 
 module.exports = User;

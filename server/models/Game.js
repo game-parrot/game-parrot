@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const { gameStatsSchema } = require("./Game-Stats")
 
 const gameSchema = new Schema(
     {
@@ -11,7 +10,7 @@ const gameSchema = new Schema(
             type: String,
             required: true
         },
-        game_stats: [ gameStatsSchema ]
+        // game_stats: [ gameStatsSchema ]
     },
     {
         toJSON: {
@@ -20,8 +19,7 @@ const gameSchema = new Schema(
     }
 );
 
-const Game = model("game", gameSchema);
-
+const Game = model("Game", gameSchema);
 module.exports = {Game, gameSchema};
 
 // get game 
