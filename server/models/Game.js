@@ -32,16 +32,3 @@ const gameSchema = new Schema(
 
 const Game = model("Game", gameSchema);
 module.exports = { Game, gameSchema };
-
-
-/*
-
-GamePlayed.findAll({where: {
-    $in {
-        users: req.params.userId
-    }
-}})  => find all games where user was playing => user a virtual or just an array reducer to do the math to figure out our score for the day
-
-*/
-// get game 
-// exclude game_url
