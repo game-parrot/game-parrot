@@ -1,7 +1,6 @@
 const { User, Game } = require('../models');
 const bcrypt = require("bcrypt");
 
-// This is for signing up
 const createUser = async (req, res) => {
   const salt = await bcrypt.genSalt(10)
   const password = await bcrypt.hash(req.body.password, salt)
@@ -69,7 +68,6 @@ const verifyUser = async (req, res) => {
 
   return res.status(200).json({ _id: user._id, username: user.username })
 }
-
 
 // This if for the homepage
 const getAllUsers = async (req, res) => {

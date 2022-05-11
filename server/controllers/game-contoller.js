@@ -1,6 +1,7 @@
 const { Game } = require('../models');
 
 // This is them providing a link which is saved to the database and potentially called through iFrames
+// Not utilizing yet
 const createGame = async (req, res) => {
     const game = await Game.create(req.body);
 
@@ -21,6 +22,8 @@ const getAllgames = async (req, res) => {
 
     res.status(200).json(allgames);
 }
+
+// Adding a user to the game function
 
 module.exports = {
     createGame,
