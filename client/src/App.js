@@ -1,15 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from "./components/Header";
-import Main from "./components/Main"
+import LandingPage from "./pages/LandingPage";
+import HomePage from "./pages/HomePage";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <div>
-    <Header />
-    <Main />
+      <Router>
+        <Routes>
+          <Route path='/' element={<LandingPage />}></Route>
+          <Route path='/home' element={<HomePage />}></Route>
+          <Route path='/dashboard' element={<Dashboard />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
