@@ -1,5 +1,4 @@
 const { Game } = require('../models');
-const { getAllUsers } = require('./user-controller');
 
 // This is them providing a link which is saved to the database and potentially called through iFrames
 // Not utilizing yet
