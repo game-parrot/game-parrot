@@ -7,7 +7,8 @@ const gameSchema = new Schema(
             required: true,
         },
         winner: {
-            type: String
+            type: String,
+            default: null
         },
         users: [{
             type: Schema.Types.ObjectID,
@@ -22,6 +23,12 @@ const gameSchema = new Schema(
 );
 
 // Add a virtual that grabs all the times the user won and how many games they've played
+// gameSchema
+//     .virtual('gameStats')
+//     .get(function(){
+//         return 
+//     })
+
 
 const Game = model("Game", gameSchema);
 module.exports = { Game, gameSchema };
