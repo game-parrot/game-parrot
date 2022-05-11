@@ -43,9 +43,24 @@ const addUserToGame = async (req, res) => {
         { $addToSet: { users: req.params.userId } },
         { new: true, runValidators: true },
       );
-    //   game.push(users);
       res.status(200).json(game);
     } catch (err) {
+      console.error(err);
+      res.status(500).json(err);
+    }
+  }
+
+  // Updating the winner of a game
+  const updateWinner = async (req, res) => {
+    try {
+      const game = await Game.findOneAndUpdate(
+        { _id: req.params.gameId },
+        { $set: {winner: req.params.userId }},
+        { new: true, runValidators: true }
+      );
+      res.status(200).json(game)
+    }
+    catch (err) {
       console.error(err);
       res.status(500).json(err);
     }
@@ -55,5 +70,6 @@ module.exports = {
     createGame,
     getAllgames,
     addUserToGame, 
-    getGameById
+    getGameById,
+    updateWinner
 };
