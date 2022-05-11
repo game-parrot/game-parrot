@@ -4,7 +4,7 @@ import 'react-bootstrap';
 import '../styles/layout.css';
 
 
-function Main() {
+function LandingMain() {
     return (
         <>
             <section class="container first">
@@ -26,4 +26,4 @@ function Main() {
     )
 }
 
-export default Main;
+export default LandingMain;
