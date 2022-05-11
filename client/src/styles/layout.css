@@ -15,6 +15,10 @@
     text-align: right;
 }
 
+a:hover{
+    text-shadow: 2px;
+}
+
 .container.signup {
     margin-top: 20%;
 }
