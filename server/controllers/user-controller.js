@@ -38,10 +38,7 @@ const authUser = async (req, res) => {
     return res.status(400).json({ message: 'Unable to authenticate user' });
   }
 
-  const token = jwt.sign({
-    username: user.username,
-    id: user._id
-  }, process.env.JWT_SECRET)
+  const token = jwt.sign({ username: user.username, id: user._id }, process.env.JWT_SECRET, { expiresIn: "2h" })
 
   res.header("auth-token", token).json({ error: null, data: { user, token } })
 }
@@ -71,7 +68,7 @@ const verifyUser = async (req, res) => {
 
 // This if for the homepage
 const getAllUsers = async (req, res) => {
-  const allUsers = await User.find({}).populate('games').populate({ path: "games", populate: { path: "game_stats" } });
+  const allUsers = await User.find({}).populate('games');
 
   if (!allUsers) {
     return res.status(400).json({ message: 'No users found' });
