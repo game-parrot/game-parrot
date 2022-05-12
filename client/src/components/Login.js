@@ -4,7 +4,7 @@ import 'react-bootstrap';
 import '../styles/layout.css';
 import { useState } from "react";
 
-function Signup() {
+function Login() {
 
     // function UserForm() {
     //     const defForm = { username: "", password: "" }
@@ -30,9 +30,9 @@ function Signup() {
         <>
             <div class="SignLogCont test">
                 <div class="card border-info mb-3">
-                    <div class="card-header">Sign Up</div>
+                    <div class="card-header">Login</div>
                     <div class="card-body text-info">
-                        <h5 class="card-title">Enter Your Signup Info</h5>
+                        <h5 class="card-title">Enter Login Info</h5>
                         <p class="card-text">
                             <div>
                                 <form>
@@ -64,7 +64,7 @@ function Signup() {
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button type="submit" class="btn btn-primary">Signup</button>
+                                        <button type="submit" class="btn btn-primary">Login</button>
                                     </div>
                                 </form>
                             </div>
@@ -76,4 +76,4 @@ function Signup() {
     )
 }
 
-export default Signup;
+export default Login;

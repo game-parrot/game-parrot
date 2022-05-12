@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap';
 import '../styles/layout.css';
+import Jumbotron from './Jumbotron';
 
 function LandingHeader() {
     return (
@@ -17,21 +18,16 @@ function LandingHeader() {
                         <div className="collapse navbar-collapse justify-content-end navbarNav">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Login</a>
+                                    <a className="nav-link" href="/login">Login</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Sign Up</a>
+                                    <a className="nav-link" href="/signup">Sign Up</a>
                                 </li>
                             </ul>
                         </div>
                     </nav>
                 </div>
-                <div className="jumbotron jumbotron-fluid">
-                    <div className="container jumbo">
-                        <h1 className="display-4">Game Parrot</h1>
-                        <p className="lead">Get Connected!</p>
-                    </div>
-                </div>
+                < Jumbotron />
             </header>
         </>
 
