@@ -36,11 +36,30 @@ a:hover{
 }
 
 .test {
-    border: 2px solid;
-    border-color: red;
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
+}
+
+.zIndex-test {
+    position: absolute;
+    z-index: 0;
+}
+
+.hidden-test {
+    position: relative;
+    z-index: 1;
+}
+
+body{
+    background-color: #f2e8cf;
+}
+
+.jumbotron.jumbotron-fluid {
+    background-image: url(../assets/proj3banner.png);
+    height: 300px;
+    color: white;
+
 }
