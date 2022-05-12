@@ -6,13 +6,13 @@ import '../styles/layout.css';
 function LandingMain() {
     return (
         <>
-            <section class="container first">
+            <section className="container first">
                 <h1>Welcome</h1>
                 <p>
                     Thanks for visiting Game Parrot! Here you can play games with your friends and stay connected! Keep track of who's winning and settle the score.
                 </p>
             </section>
-            <section class="container second">
+            <section className="container second">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit accusamus unde dolorem voluptates
                     dolores id sint ducimus tenetur pariatur perferendis omnis aspernatur beatae ad nemo similique quidem,

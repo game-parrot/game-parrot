@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-bootstrap';
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";

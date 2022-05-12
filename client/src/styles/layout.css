@@ -62,3 +62,9 @@ body{
     height: 300px;
     color: white;
 }
+
+.navbarUl {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5rem;
+}
