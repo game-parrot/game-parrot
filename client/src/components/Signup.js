@@ -10,11 +10,9 @@ import { useState } from "react";
 function Signup() {
 
     // function UserForm() {
-    //     const defForm = { username: "", password: "" }
-    //     const [formData, setFormData] = useState({
-    //         username: "",
-    //         password: ""
-    //     });
+        const defForm = { username: "", password: "" }
+        const [formData, setFormData] = useState(defForm);
+
 
     //     const handleChange = (event) => {
     //         setFormData({ ...formData, [event.target.username]: event.target.value });
