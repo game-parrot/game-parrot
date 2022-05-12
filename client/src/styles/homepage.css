@@ -1,0 +1,59 @@
+.gameparrotImg {
+    width: 10%;
+    min-width: 5rem;
+    margin-left: 10%;
+}
+
+.navbarNav {
+    margin-right: 5%;
+    font-size: 150%;
+}
+
+.playersCont {
+    border: 1px solid black;
+    margin: 1rem;
+    width: 48%;
+    padding: 0.5rem;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.playerUl {
+    list-style-type: none;
+}
+
+.playerLi {
+    margin: 0.1rem;
+    padding: 0.5rem;
+}
+
+.userBtn {
+    width: 100%;
+    text-align: start;
+}
+
+
+.homepageBody {
+    display: flex;
+    flex-direction: row;
+}
+
+.caroCont {
+    margin: 1rem;
+    width: 48%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.caroItem {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+.caroImg {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+}

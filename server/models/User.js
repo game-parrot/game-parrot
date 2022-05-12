@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-//const { gameSchema } = require("./Game")
 
 const userSchema = new Schema(
   {
@@ -11,15 +10,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    salt: {
+      type: String
+    },
     games: [{
       type: Schema.Types.ObjectID,
       ref: "Game",
-      game_stats: [
-        {
-          type: Schema.Types.ObjectID,
-          ref: 'GameStats'
-        }
-      ]
     }],
     friends: [this]
   },
