@@ -1,7 +1,20 @@
 .jumbo{
     text-align: center;
 }
-
+img {
+    width: 75px;
+    height: 75px;
+    margin-left: 20px;
+}
+.container.jumbo {
+    margin-top: 175px;
+}
+.display-4 {
+    color: white;
+}
+.lead {
+    color:white;
+}
 .container.first{
     text-align: left;
     margin-left: 5%;
@@ -14,7 +27,12 @@
 .navbar-Nav{
     text-align: right;
 }
-
+.jumbotron.jumbotron-fluid {
+    background-image: url(./assets/proj3banner.png);
+    height: 600px;
+    border-top: 3px solid #d00000;
+    border-bottom: 3px solid #d00000;
+}
 .container.signup{
     margin-top: 20%;
 }
@@ -45,4 +63,10 @@
     flex-flow: column nowrap;
 
 }
-
+body{
+    background-color: #f2e8cf;
+    
+}
+div.nav {
+    background-color: #;
+}
