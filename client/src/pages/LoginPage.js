@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import '../styles/landingpage.css';
-import LandingHeader from '../components/LandingHeader';
-import LandingMain from '../components/LandingMain';
+import '../styles/signup-login.css';
+import SignupLoginHeader from '../components/SignupLoginHeader';
+import Login from '../components/Login';
 
 //display signup when signup button is clicked
 
@@ -9,8 +10,8 @@ const LandingPage = (props) => {
 
   return (
     <>
-      <LandingHeader />
-      <LandingMain />
+      <SignupLoginHeader />
+      <Login />
     </>
   )
 }
