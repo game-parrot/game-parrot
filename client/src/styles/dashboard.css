@@ -1,0 +1,71 @@
+.dashMainCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 85vh;
+}
+
+.chatroomFrame {
+    /* align-self: flex-end; */
+    margin: 0.5rem;
+    width: 49.5%;
+    /* border: 1px solid black; */
+}
+
+.gameroomFrame {
+    /* align-self: flex-end; */
+    margin: 0.5rem;
+    width: 49.5%;
+    /* border: 1px solid black; */
+}
+
+.iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.gameBarCont {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20rem;
+    width: 99%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+}
+
+.gameCard {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 40rem;
+    border: 1px solid black;
+    margin-right: 1rem;
+}
+
+.gameImgCont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.gameCardImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.gameTitle {
+    text-align: center;
+    font-size: 120%;
+}
+
+.playBtn {
+    width: fit-content;
+    align-self: center;
+    margin-bottom: 0.5rem;
+}
