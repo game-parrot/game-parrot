@@ -28,43 +28,43 @@ function Login() {
 
     return (
         <>
-            <div class="SignLogCont test">
-                <div class="card border-info mb-3">
-                    <div class="card-header">Login</div>
-                    <div class="card-body text-info">
-                        <h5 class="card-title">Enter Login Info</h5>
-                        <p class="card-text">
+            <div className="SignLogCont test">
+                <div className="card border-info mb-3">
+                    <div className="card-header">Login</div>
+                    <div className="card-body text-info">
+                        <h5 className="card-title">Enter Login Info</h5>
+                        <p className="card-text">
                             <div>
                                 <form>
 
-                                    <div class="form-group row">
-                                        <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
-                                        <div class="col-sm-10">
+                                    <div className="form-group row">
+                                        <label for="staticEmail" className="col-sm-2 col-form-label">Username</label>
+                                        <div className="col-sm-10">
                                             <input
                                                 // onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                                                 type="text"
-                                                class="form-control"
+                                                className="form-control"
                                                 id="inputUsername"
                                                 value="" //{formData.username}
                                             // onChange={handleChange}
                                             />
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                                        <div class="col-sm-10">
+                                    <div className="form-group row">
+                                        <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
+                                        <div className="col-sm-10">
                                             <input
                                                 // onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                                                 type="password"
-                                                class="form-control"
+                                                className="form-control"
                                                 id="inputPassword" placeholder="Password"
                                                 value="" //{formData.password}
                                             // onChange = {handleChange}
                                             />
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    <div className="col-12">
+                                        <button type="submit" className="btn btn-primary">Login</button>
                                     </div>
                                 </form>
                             </div>
