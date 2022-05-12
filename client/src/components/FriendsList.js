@@ -6,7 +6,9 @@ import '../styles/layout.css';
 function FriendsList() {
     return (
         <>
-           <iframe src='https://buddyboardgames.com/connect4' height='500' width='750' title='games'></iframe>
+            <div className='gameroomFrame'>
+                <iframe src='https://buddyboardgames.com/connect4' title='games' className='iframe'></iframe>
+            </div>
         </>
     )
 }

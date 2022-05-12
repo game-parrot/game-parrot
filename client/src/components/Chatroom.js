@@ -6,7 +6,9 @@ import '../styles/layout.css';
 function Chatroom() {
     return (
         <>
-           
+            <div className='chatroomFrame'>
+                <iframe src='' title='games' className='iframe'></iframe>
+            </div>
         </>
     )
 }
