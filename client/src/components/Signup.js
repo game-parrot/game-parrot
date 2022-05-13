@@ -18,7 +18,7 @@ function Signup() {
 
     const handleFormSubmit = async (e) => {
         e.preventDefault()
-        const query = await fetch("/users", {
+        const query = await fetch("/api/users", {
             method: "post",
             body: JSON.stringify(formData),
             headers: {
@@ -70,7 +70,12 @@ function Signup() {
                                         </div>
                                     </div>
                                     <div className="col-12">
-                                        <button type="submit" className="btn btn-primary" onSubmit={handleFormSubmit}>Signup</button>
+                                        <button  
+                                            className="btn btn-primary" 
+                                            onClick={handleFormSubmit}
+                                        >
+                                            Signup
+                                        </button>
                                     </div>
                                 </form>
                             </div>

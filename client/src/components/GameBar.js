@@ -6,6 +6,7 @@ import gameList from '../utils/GameList';
 function GameBar() {
     return (
         <>
+            <h2>Choose A Game To Play!</h2>
             <div className='gameBarCont'>
                 {gameList.map(game => (
                 <div className='gameCard'>
