@@ -9,11 +9,12 @@ import GameBar from './GameBar';
 function DashMain() {
     return (
         <>
+            <GameBar />
             <div className='dashMainCont'>
                 <FriendsList />
                 <Chatroom />
             </div>
-            <GameBar />
+            
         </>
     )
 }

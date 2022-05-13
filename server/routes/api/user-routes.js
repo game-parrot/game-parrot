@@ -13,8 +13,8 @@ const {
 
 // Declare the routes that point to the controllers above
 router.route('/').get(getAllUsers).post(createUser);
-router.route('./auth').post(authUser)
-router.route('./verify').post(verifyUser)
+router.route('/auth').post(authUser)
+router.route('/verify').post(verifyUser)
 
 router.route('/:userId').get(getUserById);
 

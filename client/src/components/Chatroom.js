@@ -7,7 +7,7 @@ function Chatroom() {
     return (
         <>
             <div className='chatroomFrame'>
-                <iframe src='' title='games' className='iframe'></iframe>
+                <iframe src='https://game-parrot-chatroom.herokuapp.com/' title='games' className='iframe'></iframe>
             </div>
         </>
     )

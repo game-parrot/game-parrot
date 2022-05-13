@@ -23,7 +23,7 @@ function FriendsList() {
     return (
         <>
             <div className='gameroomFrame'>
-                <iframe src='https://buddyboardgames.com/connect4' title='games' className='iframe'></iframe>
+                <iframe src='https://buddyboardgames.com/' title='games' className='iframe'></iframe>
             </div>
         </>
     )
