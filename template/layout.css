@@ -49,9 +49,6 @@ img {
     text-align: center;
 }
 
-.con-card{
-
-}
 
 .test{
     border: 2px solid;
@@ -67,6 +64,18 @@ body{
     background-color: #f2e8cf;
     
 }
-div.nav {
-    background-color: #;
+.col {
+    width: 200px;
+    height: 200px;
+}
+
+
+.signup {
+    background-image: url(./assets/signupbckgd.png);
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    color: #001d3d;
 }
