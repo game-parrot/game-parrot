@@ -3,28 +3,36 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap';
 import '../styles/layout.css';
 import { useState } from "react";
+import cookie from "js-cookie"
 
 function Login() {
 
-    // function UserForm() {
-    //     const defForm = { username: "", password: "" }
-    //     const [formData, setFormData] = useState({
-    //         username: "",
-    //         password: ""
-    //     });
+    const defForm = { username: "", password: "" }
+    const [ formData, setFormData ] = useState(defForm)
+  
+    const handleInputChange = (e) => {
+      setFormData({...formData, [e.target.name]: e.target.value})
+    }
+  
+    const handleFormSubmit = async (e) => {
+      e.preventDefault()
+      const query = await fetch("/api/users/auth", {
+        method: "post",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      console.log( query )
+      const result = await query.json()
+      console.log(result)
 
-    //     const handleChange = (event) => {
-    //         setFormData({ ...formData, [event.target.username]: event.target.value });
-    //     };
+  
+      if( result && !result.err && result.data && result.data.token ){
+        cookie.set("auth-token", result.data.token, { expires: 3 })
+      }
 
-    //     const handleSubmit = (event) => {
-    //         // prevents the submit button from refreshing the page
-    //         event.preventDefault();
-    //         console.log(formData);
-    //         setFormData({ username: "", password: "" });
-    //         <form onSubmit={handleSubmit} />
-    //     }
-    // };
+    }
 
     return (
         <>
@@ -33,42 +41,42 @@ function Login() {
                     <div className="card-header">Login</div>
                     <div className="card-body text-info">
                         <h5 className="card-title">Enter Login Info</h5>
-                        <p className="card-text">
+                        <div className="card-text">
                             <div>
                                 <form>
 
                                     <div className="form-group row">
-                                        <label for="staticEmail" className="col-sm-2 col-form-label">Username</label>
+                                        <label className="col-sm-2 col-form-label">Username</label>
                                         <div className="col-sm-10">
                                             <input
-                                                // onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                                                 type="text"
+                                                name="username"
+                                                placeholder="Username"
                                                 className="form-control"
-                                                id="inputUsername"
-                                                value="" //{formData.username}
-                                            // onChange={handleChange}
+                                                value={formData.username}
+                                                onChange={handleInputChange}
                                             />
                                         </div>
                                     </div>
                                     <div className="form-group row">
-                                        <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
+                                        <label className="col-sm-2 col-form-label">Password</label>
                                         <div className="col-sm-10">
                                             <input
-                                                // onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                                                 type="password"
+                                                name="password"
                                                 className="form-control"
                                                 id="inputPassword" placeholder="Password"
-                                                value="" //{formData.password}
-                                            // onChange = {handleChange}
+                                                value={formData.password}
+                                                onChange={handleInputChange}
                                             />
                                         </div>
                                     </div>
                                     <div className="col-12">
-                                        <button type="submit" className="btn btn-primary">Login</button>
+                                        <button type="submit" className="btn btn-primary" onClick={handleFormSubmit}>Login</button>
                                     </div>
                                 </form>
                             </div>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -10,6 +10,7 @@ const createUser = async (req, res) => {
     password: password,
     salt: salt
   }
+  console.log(userToInsert)
 
   const user = await User.create(userToInsert);
 
@@ -22,6 +23,7 @@ const createUser = async (req, res) => {
 
 // This is for authenticating a login
 const authUser = async (req, res) => {
+  console.log("hit")
   // Find the user by the username
   const user = await User.findOne({
     username: req.body.username
@@ -39,6 +41,7 @@ const authUser = async (req, res) => {
   }
 
   const token = jwt.sign({ username: user.username, id: user._id }, process.env.JWT_SECRET, { expiresIn: "2h" })
+  console.log(token)
 
   res.header("auth-token", token).json({ error: null, data: { user, token } })
 }
