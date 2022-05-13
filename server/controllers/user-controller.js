@@ -1,5 +1,6 @@
 const { User, Game } = require('../models');
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 const createUser = async (req, res) => {
   const salt = await bcrypt.genSalt(10)
@@ -72,6 +73,7 @@ const verifyUser = async (req, res) => {
 // This if for the homepage
 const getAllUsers = async (req, res) => {
   const allUsers = await User.find({}).populate('games');
+  // as we populate the games, filter for unique values
 
   if (!allUsers) {
     return res.status(400).json({ message: 'No users found' });

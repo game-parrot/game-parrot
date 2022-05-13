@@ -25,9 +25,7 @@ function Signup() {
                 "Content-Type": "application/json"
             }
         })
-        console.log(query)
         const result = await query.json()
-        console.log(result)
         navigate("/home")
     }
 
@@ -70,8 +68,8 @@ function Signup() {
                                         </div>
                                     </div>
                                     <div className="col-12">
-                                        <button  
-                                            className="btn btn-primary" 
+                                        <button
+                                            className="btn btn-primary"
                                             onClick={handleFormSubmit}
                                         >
                                             Signup

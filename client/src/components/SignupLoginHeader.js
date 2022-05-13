@@ -6,7 +6,7 @@ import '../styles/layout.css';
 
 //display signup when signup button is clicked
 
-const SignupLoginHeader = (props) => {
+const SignupLoginHeader = () => {
 
   return (
     <>

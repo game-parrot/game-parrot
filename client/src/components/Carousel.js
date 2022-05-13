@@ -14,7 +14,7 @@ function Carousel() {
                             <img src='https://cdn.discordapp.com/attachments/949489439535677440/974208130768584734/scrollthrough.png' className="caroImg" alt='Scroll Through Our Game Library'/>
                         </div>
                         {gameList.map(game => (
-                            <div className="carousel-item caroItem">
+                            <div className="carousel-item caroItem" key={game.game_title}>
                                 <img src={game.game_img} className="caroImg" alt={game.game_alt}/>
                             </div>
                         ))}

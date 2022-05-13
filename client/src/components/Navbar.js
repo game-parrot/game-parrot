@@ -4,7 +4,7 @@ import 'react-bootstrap';
 import '../styles/layout.css';
 
 function Navbar() {
-
+    // fix hamburger menu
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
