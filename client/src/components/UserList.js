@@ -5,6 +5,27 @@ import '../styles/layout.css';
 // import TestData from 'test';
 
 function UserList() {
+
+    /*
+    const [ users, setUsers ] = useState("")
+    
+    
+    // This function should be a fetch request to get all users. The query should be utilize useState to append the data to the page
+    const handleFormSubmit = async (e) => {
+        e.preventDefault()
+        const query = await fetch("/api/users", {
+            method: "get",
+            body: JSON.stringify(formData),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        console.log(query)
+        const result = await query.json()
+        console.log(result)
+    }
+    */
+
     return (
         <>
             <div className='playersCont'>

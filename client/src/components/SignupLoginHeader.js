@@ -1,13 +1,16 @@
+import { useState, useEffect } from "react"
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap';
 import '../styles/layout.css';
-import Jumbotron from './Jumbotron';
 
-function LandingHeader() {
-    return (
-        <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+//display signup when signup button is clicked
+
+const SignupLoginHeader = (props) => {
+
+  return (
+    <>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="/"><img className='gameparrotImg' src='https://cdn.discordapp.com/attachments/972165484269146136/973606897804537896/gameparrot.png' alt='Game Parrot'></img></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -26,10 +29,10 @@ function LandingHeader() {
                     </ul>
                 </div>
             </nav>
-            <Jumbotron />
-        </>
-
-    )
+    </>
+  )
 }
 
-export default LandingHeader;
+export default SignupLoginHeader;
+
+                
