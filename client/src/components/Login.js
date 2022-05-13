@@ -3,35 +3,38 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap';
 import '../styles/layout.css';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 import cookie from "js-cookie"
 
 function Login() {
 
+    // Login authentication does not work rn
+
     const defForm = { username: "", password: "" }
-    const [ formData, setFormData ] = useState(defForm)
-  
+    const [formData, setFormData] = useState(defForm)
+
     const handleInputChange = (e) => {
-      setFormData({...formData, [e.target.name]: e.target.value})
+        setFormData({ ...formData, [e.target.name]: e.target.value })
     }
-  
+
+    const navigate = useNavigate()
+
     const handleFormSubmit = async (e) => {
-      e.preventDefault()
-      const query = await fetch("/api/users/auth", {
-        method: "post",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json"
+        e.preventDefault()
+        console.log("here")
+        const query = await fetch("/api/users/auth", {
+            method: "post",
+            body: JSON.stringify(formData),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        const result = await query.json()
+
+        if (result && !result.err && result.data && result.data.token) {
+            cookie.set("auth-token", result.data.token, { expires: 3 })
         }
-      })
-      console.log( query )
-      const result = await query.json()
-      console.log(result)
-
-  
-      if( result && !result.err && result.data && result.data.token ){
-        cookie.set("auth-token", result.data.token, { expires: 3 })
-      }
-
+        navigate("/home")
     }
 
     return (
