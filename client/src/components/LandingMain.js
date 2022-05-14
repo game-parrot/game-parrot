@@ -13,7 +13,7 @@ function LandingMain() {
             <section className='intro'>
                 <h1> Welcome</h1>
                 <p>
-                    Game Parrot is a place where you can connect with friends and play a variety of our favorite board games. Gaming is the perfect way to interact with friends, meet new people, and make new friends. Connect with people that share you interests. Try to best your friends or strangers. Join us at Game Parrot!
+                    Game Parrot is a place where you can connect with friends and play a variety of our favorite board games online. Gaming is the perfect way to interact with friends, meet new people, and make new friends. Connect with people that share you interests. Try to best your friends or strangers. Join us at Game Parrot!
                 </p>
             </section>
 

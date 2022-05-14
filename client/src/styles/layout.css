@@ -1,7 +1,7 @@
 .jumbotron.jumbotron-fluid {
     background-image: url(../assets/proj3banner.png);
     background-size: cover;
-    /* height: 300px; */
+    height: 300px;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
     color: white;
 }
@@ -9,6 +9,7 @@
 .container.jumbo{
     text-align: right;
     align-items: center!important;
+    text-align: center;
 }
 
 section.intro {

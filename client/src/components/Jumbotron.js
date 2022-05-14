@@ -10,7 +10,7 @@ function Jumbotron() {
             <div className="jumbotron jumbotron-fluid">
                 <div className="container jumbo">
                     <h1 className="display-4">Game Parrot</h1>
-                    <p className="lead">Let's play!</p>
+                    {/* <p className="lead">Let's play!</p> */}
                 </div>
             </div>
         </>
