@@ -2,24 +2,55 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap';
 import '../styles/layout.css';
+import { Card } from 'react-bootstrap';
+import connect from '../assets/connect.jpg';
+import play from '../assets/play1.jpg'
+import chat from '../assets/chat.jpg'
 
 function LandingMain() {
     return (
         <>
-            <section className="container first">
-                <h1>Welcome</h1>
+            <section className='intro'>
+                <h1> Welcome</h1>
                 <p>
-                    Thanks for visiting Game Parrot! Here you can play games with your friends and stay connected! Keep track of who's winning and settle the score.
+                    Game Parrot is a place where you can connect with friends and play a variety of our favorite board games. Gaming is the perfect way to interact with friends, meet new people, and make new friends. Connect with people that share you interests. Try to best your friends or strangers. Join us at Game Parrot!
                 </p>
             </section>
-            <section className="container second">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit accusamus unde dolorem voluptates
-                    dolores id sint ducimus tenetur pariatur perferendis omnis aspernatur beatae ad nemo similique quidem,
-                    facilis fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum et enim quo beatae, officiis
-                    aut possimus cumque a consequatur perferendis veritatis inventore rem itaque, quis eaque neque
-                    exercitationem. Omnis, temporibus!
-                </p>
+            <section className='container sectionCards'>
+
+                <div className='cardHolder'>
+                    <Card style={{ width: '27rem' }}>
+                        <Card.Img variant="top" className='cardimg' src={play} />
+                        <Card.Body>
+                            <Card.Title>Play</Card.Title>
+                            <Card.Text>
+                                Choose what you want to play and get your game on!
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+                <div className='cardHolder'>
+                    <Card style={{ width: '27rem' }}>
+                        <Card.Img variant="top" className='cardimg' src={chat} />
+                        <Card.Body>
+                            <Card.Title>Chat</Card.Title>
+                            <Card.Text>
+                                Prepare yourselves! Here, trash talking is encouraged.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+                <div className='cardHolder'>
+                    <Card style={{ width: '27rem' }}>
+                        <Card.Img variant="top" className='cardimg' src={connect} />
+                        <Card.Body>
+                            <Card.Title>Connect</Card.Title>
+                            <Card.Text>
+                                Make a bitter rival or a new friend, it's all possible on Game Parrot!
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
             </section>
         </>
     )
