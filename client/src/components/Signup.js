@@ -33,7 +33,7 @@ function Signup() {
     return (
         <>
             <div className="SignLogCont test">
-                <div className="card border-info mb-3">
+                <div className="card border-info mb-3 signLogCard">
                     <div className="card-header">Sign Up</div>
                     <div className="card-body text-info">
                         <h5 className="card-title">Enter Your Signup Info</h5>
@@ -42,25 +42,25 @@ function Signup() {
                                 <form>
 
                                     <div className="form-group row">
-                                        <label for="staticEmail" className="col-sm-2 col-form-label">Username</label>
+                                        <label for="staticEmail" className="col-sm-2 col-form-label"></label>
                                         <div className="col-sm-10">
                                             <input
                                                 type="text"
                                                 name="username"
                                                 placeholder="Username"
-                                                className="form-control"
+                                                className="form-control cardInput"
                                                 value={formData.username}
                                                 onChange={handleInputChange}
                                             />
                                         </div>
                                     </div>
                                     <div className="form-group row">
-                                        <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
+                                        <label for="inputPassword" className="col-sm-2 col-form-label"></label>
                                         <div className="col-sm-10">
                                             <input
                                                 type="password"
                                                 name="password"
-                                                className="form-control"
+                                                className="form-control cardInput"
                                                 id="inputPassword" placeholder="Password"
                                                 value={formData.password}
                                                 onChange={handleInputChange}
