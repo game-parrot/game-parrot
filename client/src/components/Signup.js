@@ -18,7 +18,7 @@ function Signup() {
 
     const handleFormSubmit = async (e) => {
         e.preventDefault()
-        const query = await fetch("/users", {
+        const query = await fetch("/api/users", {
             method: "post",
             body: JSON.stringify(formData),
             headers: {

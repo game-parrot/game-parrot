@@ -2,37 +2,71 @@
     text-align: center;
 }
 
-.container.first {
+section.intro {
+    text-align: center;
+    padding: 5rem;
+    background-color: #233d4d83;
+    margin: 2%;
+    width:fit-content;
+}
+
+section.container.sectionCards{
+    margin:auto;
+    display: flex;
+    padding: 10px;
+}
+/* .sectionCards{
+    display: flex;
+    margin: auto;
+} */
+
+.cardHolder{
+    margin: 1%;
+    width: fit-content;
+}
+
+.card {
+
+    text-align: center;
+}
+
+.cardimg{
+    height: 300px;
+}
+
+/* .container.first {
     text-align: left;
     margin-left: 5%;
+    padding: 5rem;
 }
 
 .container.second {
+    text-align: center;
+}
+
+.container.third {
     text-align: right;
+} */
+
+.navbar {
+    background-color: #4F759B !important;
+}
+
+.nav-item {
+    color: white !important;
+
 }
 
 .navbar-Nav {
     text-align: right;
 }
 
-a:hover{
+a:hover {
     text-shadow: 2px;
 }
 
 .container.signup {
     margin-top: 20%;
-}
-
-.card-text {
-    text-align: center;
-    display: block;
-    align-content: center;
-    align-items: center;
-}
-
-.card {
-    width: 40rem;
-    text-align: center;
 }
 
 .test {
@@ -53,7 +87,7 @@ a:hover{
     z-index: 1;
 }
 
-body{
+body {
     background-color: #f2e8cf;
 }
 
