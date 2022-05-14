@@ -60,7 +60,7 @@ Our team made a second repository to handle the chatroom.
 
 - Eugene Ahn
 
-- Joseph Andrew Anderson
+- Andrew Anderson
 
 - Jasmine Bolds
 
