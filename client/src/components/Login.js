@@ -20,27 +20,27 @@ function Login() {
     const navigate = useNavigate()
 
     const handleFormSubmit = async (e) => {
-        e.preventDefault()
-        console.log("here")
-        const query = await fetch("/api/users/auth", {
-            method: "post",
-            body: JSON.stringify(formData),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        const result = await query.json()
+        // e.preventDefault()
+        // console.log("here")
+        // const query = await fetch("/api/users/auth", {
+        //     method: "post",
+        //     body: JSON.stringify(formData),
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     }
+        // })
+        // const result = await query.json()
 
-        if (result && !result.err && result.data && result.data.token) {
-            cookie.set("auth-token", result.data.token, { expires: 3 })
-        }
+        // if (result && !result.err && result.data && result.data.token) {
+        //     cookie.set("auth-token", result.data.token, { expires: 3 })
+        // }
         navigate("/home")
     }
 
     return (
         <>
             <div className="SignLogCont test">
-                <div className="card border-info mb-3">
+                <div className="card border-info mb-3 signLogCard">
                     <div className="card-header">Login</div>
                     <div className="card-body text-info">
                         <h5 className="card-title">Enter Login Info</h5>
@@ -49,25 +49,25 @@ function Login() {
                                 <form>
 
                                     <div className="form-group row">
-                                        <label className="col-sm-2 col-form-label">Username</label>
+                                        <label className="col-sm-2 col-form-label"></label>
                                         <div className="col-sm-10">
                                             <input
                                                 type="text"
                                                 name="username"
                                                 placeholder="Username"
-                                                className="form-control"
+                                                className="form-control cardInput"
                                                 value={formData.username}
                                                 onChange={handleInputChange}
                                             />
                                         </div>
                                     </div>
                                     <div className="form-group row">
-                                        <label className="col-sm-2 col-form-label">Password</label>
+                                        <label className="col-sm-2 col-form-label"></label>
                                         <div className="col-sm-10">
                                             <input
                                                 type="password"
                                                 name="password"
-                                                className="form-control"
+                                                className="form-control cardInput"
                                                 id="inputPassword" placeholder="Password"
                                                 value={formData.password}
                                                 onChange={handleInputChange}
