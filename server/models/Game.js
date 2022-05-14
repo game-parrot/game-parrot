@@ -6,11 +6,14 @@ const gameSchema = new Schema(
             type: String,
             required: true,
         },
-        game_url: {
+        winner: {
             type: String,
-            required: true
+            default: null
         },
-        // game_stats: [ gameStatsSchema ]
+        users: [{
+            type: Schema.Types.ObjectID,
+            ref: "User",
+        }]
     },
     {
         toJSON: {
@@ -19,8 +22,13 @@ const gameSchema = new Schema(
     }
 );
 
-const Game = model("Game", gameSchema);
-module.exports = {Game, gameSchema};
+// Add a virtual that grabs all the times the user won and how many games they've played
+// gameSchema
+//     .virtual('gameStats')
+//     .get(function(){
+//         return 
+//     })
 
-// get game 
-// exclude game_url
+
+const Game = model("Game", gameSchema);
+module.exports = { Game, gameSchema };

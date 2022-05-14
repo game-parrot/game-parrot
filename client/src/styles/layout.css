@@ -1,0 +1,104 @@
+.jumbo {
+    text-align: center;
+}
+
+section.intro {
+    text-align: center;
+    padding: 5rem;
+    background-color: #233d4d83;
+    margin: 2%;
+    width:fit-content;
+}
+
+section.container.sectionCards{
+    margin:auto;
+    display: flex;
+    padding: 10px;
+}
+/* .sectionCards{
+    display: flex;
+    margin: auto;
+} */
+
+.cardHolder{
+    margin: 1%;
+    width: fit-content;
+}
+
+.card {
+
+    text-align: center;
+}
+
+.cardimg{
+    height: 300px;
+}
+
+/* .container.first {
+    text-align: left;
+    margin-left: 5%;
+    padding: 5rem;
+}
+
+.container.second {
+    text-align: center;
+}
+
+.container.third {
+    text-align: right;
+} */
+
+.navbar {
+    background-color: #4F759B !important;
+}
+
+.nav-item {
+    color: white !important;
+
+}
+
+.navbar-Nav {
+    text-align: right;
+}
+
+a:hover {
+    text-shadow: 2px;
+}
+
+.container.signup {
+    margin-top: 20%;
+}
+
+.test {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.zIndex-test {
+    position: absolute;
+    z-index: 0;
+}
+
+.hidden-test {
+    position: relative;
+    z-index: 1;
+}
+
+body {
+    background-color: #f2e8cf;
+}
+
+.jumbotron.jumbotron-fluid {
+    background-image: url(../assets/proj3banner.png);
+    height: 300px;
+    color: white;
+}
+
+.navbarUl {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5rem;
+}

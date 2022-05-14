@@ -1,6 +1,7 @@
-.jumbo{
+.jumbo {
     text-align: center;
 }
+
 img {
     width: 75px;
     height: 75px;
@@ -20,13 +21,14 @@ img {
     margin-left: 5%;
 }
 
-.container.second{
+.container.second {
     text-align: right;
 }
 
-.navbar-Nav{
+.navbar-Nav {
     text-align: right;
 }
+
 .jumbotron.jumbotron-fluid {
     background-image: url(./assets/proj3banner.png);
     height: 600px;
@@ -37,20 +39,19 @@ img {
     margin-top: 20%;
 }
 
-.card-text{
+.card-text {
     text-align: center;
-    display:block;
+    display: block;
     align-content: center;
     align-items: center;
 }
 
-.card{
+.card {
     width: 30rem;
     text-align: center;
 }
 
-
-.test{
+.test {
     border: 2px solid;
     border-color: red;
     display: flex;
@@ -58,12 +59,13 @@ img {
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
-
 }
+
 body{
     background-color: #f2e8cf;
     
 }
+
 .col {
     width: 200px;
     height: 200px;
@@ -79,3 +81,4 @@ body{
 label {
     color: #001d3d;
 }
+
