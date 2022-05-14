@@ -5,20 +5,13 @@
 section.intro {
     text-align: center;
     padding: 5rem;
-    background-color: #233d4d83;
-    margin: 2%;
-    width:fit-content;
+    background-color: #233d4d16;
+    /* margin: 2%; */
 }
 
-section.container.sectionCards{
-    margin:auto;
-    display: flex;
-    padding: 10px;
+.row{
+    align-items: center;
 }
-/* .sectionCards{
-    display: flex;
-    margin: auto;
-} */
 
 .cardHolder{
     margin: 1%;
