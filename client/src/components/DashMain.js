@@ -4,12 +4,12 @@ import 'react-bootstrap';
 import '../styles/layout.css';
 import FriendsList from './FriendsList'
 import Chatroom from './Chatroom'
-import GameBar from './GameBar';
+// import GameBar from './GameBar';
 
 function DashMain() {
     return (
         <>
-            <GameBar />
+            {/* <GameBar /> */}
             <div className='dashMainCont'>
                 <FriendsList />
                 <Chatroom />

@@ -14,7 +14,7 @@ function GameBar() {
                         <img className='gameCardImg' src={game.game_img} alt={game.game_alt}/>
                     </div>
                     <p className='gameTitle'>{game.game_title}</p>
-                    <button className='playBtn'>Play Game!</button>
+                    <button className='playBtn'>Add Game</button>
                 </div>
                 ))}
             </div>

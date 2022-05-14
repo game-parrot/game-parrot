@@ -17,6 +17,13 @@ function UserList() {
         setReadyToRender(true)
     }
 
+    const gameArray = ['Chess', 'Checkers', 'Uno', 'Connect4', 'Farkle', 'Spades', 'Yahtzee', 'Crazy 8s'];
+
+    const getGame = () => {
+        const newGame = gameArray[Math.floor(Math.random() * gameArray.length)];
+        return newGame
+    }
+
     useEffect( () => {
         getAllUsers()
     }, [])
@@ -32,22 +39,20 @@ function UserList() {
                             <li className='playerLi' key={users._id}>
                                 <button className='userBtn'>
                                     <h4>Username: {users.username}</h4>
-                                    <div>Games played:{users.games.map( game => {
-                                        <p>{game.game_title}</p>
-                                    })}</div>
+                                    <p>Top Game Played: {getGame()}</p>
                                 </button>
                             </li>
                         ))}
                         <li className='playerLi'>
                             <button className='userBtn'>
                                 <h4>Username: Paul Cwik</h4>
-                                <p>Games played: Chess, Checkers, Uno</p>
+                                <p>Top Game Played: Checkers</p>
                             </button>
                         </li>
                         <li className='playerLi'>
                             <button className='userBtn'>
                                 <h4>Username: Gary Almes</h4>
-                                <p>Games played: Chess, Connect 4, Yahtzee</p>
+                                <p>Top Game Played: Yahtzee</p>
                             </button>
                         </li>
                     </ul>
