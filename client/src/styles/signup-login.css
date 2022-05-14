@@ -1,5 +1,6 @@
 .SignLogCont {
-    background-image: url('https://i0.wp.com/waytoomany.games/wp-content/uploads/2018/11/2014-02-mobilegamelibrary.jpg?w=1517&ssl=1');
+    background-image: url('../assets/back1.jpg');
+    background-size: cover;
 }
 
 .signLogCard {

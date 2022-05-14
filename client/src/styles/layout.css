@@ -1,24 +1,29 @@
-.jumbo {
+.jumbotron.jumbotron-fluid {
+    background-image: url(../assets/proj3banner.png);
+    background-size: cover;
+    height: 300px;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    color: white;
+}
+
+.container.jumbo{
+    text-align: right;
+    align-items: center!important;
     text-align: center;
 }
 
 section.intro {
     text-align: center;
     padding: 5rem;
-    background-color: #233d4d83;
-    margin: 2%;
-    width:fit-content;
+    background-color: #233d4dad;
+    text-shadow: black 20px;
+    color: white;
+    /* margin: 2%; */
 }
 
-section.container.sectionCards{
-    margin:auto;
-    display: flex;
-    padding: 10px;
+.row{
+    align-items: center;
 }
-/* .sectionCards{
-    display: flex;
-    margin: auto;
-} */
 
 .cardHolder{
     margin: 1%;
@@ -34,22 +39,10 @@ section.container.sectionCards{
     height: 300px;
 }
 
-/* .container.first {
-    text-align: left;
-    margin-left: 5%;
-    padding: 5rem;
-}
-
-.container.second {
-    text-align: center;
-}
-
-.container.third {
-    text-align: right;
-} */
-
 .navbar {
-    background-color: #4F759B !important;
+    /* background-color: #4F759B !important; */
+    background-color: #0c0a3e !important;
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #b5b5ff;
 }
 
 .nav-item {
@@ -88,13 +81,9 @@ a:hover {
 }
 
 body {
-    background-color: #f2e8cf;
-}
-
-.jumbotron.jumbotron-fluid {
-    background-image: url(../assets/proj3banner.png);
-    height: 300px;
-    color: white;
+    /* background-color: #86cb92; */
+    background-image: url(../assets/landingback.jpg);
+    background-size: cover;
 }
 
 .navbarUl {

@@ -13,12 +13,12 @@ function LandingMain() {
             <section className='intro'>
                 <h1> Welcome</h1>
                 <p>
-                    Game Parrot is a place where you can connect with friends and play a variety of our favorite board games. Gaming is the perfect way to interact with friends, meet new people, and make new friends. Connect with people that share you interests. Try to best your friends or strangers. Join us at Game Parrot!
+                    Game Parrot is a place where you can connect with friends and play a variety of our favorite board games online. Gaming is the perfect way to interact with friends, meet new people, and make new friends. Connect with people that share you interests. Try to best your friends or strangers. Join us at Game Parrot!
                 </p>
             </section>
-            <section className='container sectionCards'>
 
-                <div className='cardHolder'>
+            <section className='row mx-auto' style={{width: '100%'}}>
+                <div className='cardHolder mx-auto'>
                     <Card style={{ width: '27rem' }}>
                         <Card.Img variant="top" className='cardimg' src={play} />
                         <Card.Body>
@@ -29,7 +29,7 @@ function LandingMain() {
                         </Card.Body>
                     </Card>
                 </div>
-                <div className='cardHolder'>
+                <div className='cardHolder mx-auto'>
                     <Card style={{ width: '27rem' }}>
                         <Card.Img variant="top" className='cardimg' src={chat} />
                         <Card.Body>
@@ -40,13 +40,13 @@ function LandingMain() {
                         </Card.Body>
                     </Card>
                 </div>
-                <div className='cardHolder'>
+                <div className='cardHolder mx-auto'>
                     <Card style={{ width: '27rem' }}>
                         <Card.Img variant="top" className='cardimg' src={connect} />
                         <Card.Body>
                             <Card.Title>Connect</Card.Title>
                             <Card.Text>
-                                Make a bitter rival or a new friend, it's all possible on Game Parrot!
+                                Make a bitter rival or a new friend, your choice!
                             </Card.Text>
                         </Card.Body>
                     </Card>
